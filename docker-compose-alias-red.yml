@@ -1,0 +1,13 @@
+# este fichero le añade un alias de red al contenedor creado a partir del fichero 
+# docker-compose.yml
+# para usar este archivo, debes utilizar como base el fichero docker-compose.yml 
+# de este mismo repositorio, de la siguiente manera:
+
+  #> docker compose -f docker-compose.yml -f docker-compose-alias-red.yml up -d
+
+services:
+  ubuntu-pwsh:
+    networks:
+      red-compose:
+        aliases:
+          - alias-override

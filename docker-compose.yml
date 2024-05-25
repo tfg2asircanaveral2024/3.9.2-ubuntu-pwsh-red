@@ -1,0 +1,10 @@
+# un contenedor conectado a una red creada al levantar el entorno, de tipo bridge
+services:
+  ubuntu-pwsh:
+    image: tfg2asircanaveral2024/3.4.1-dockerfile-pwsh-core
+    networks:
+      - red-compose
+
+networks:
+  red-compose:
+    driver: bridge
